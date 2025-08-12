@@ -47,3 +47,9 @@ _No server or dependencies required._
 ---
 
 ## File Structure
+simpleScoreboard/
+├─ index.html
+├─ styles.css
+├─ script.js
+└─ fonts/
+└─ digital-7.ttf
