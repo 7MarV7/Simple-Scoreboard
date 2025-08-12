@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'Digital7';
+  src: url('./fonts/digital-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global body styles */
+body {
+  background-color: rgba(27, 18, 18, 0.726);
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main content centered */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+/* Scoreboard container */
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  background-color: rgb(25, 36, 77);
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  width: 40%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Score section titles */
+#homeScore,
+#guestScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Remove default margins from score titles */
+#homeScore h1,
+#guestScore h1 {
+  margin: 15px 0 0 -10px;
+  padding: 0;
+}
+
+/* Score display styling */
+span.homeScore,
+span.guestScore {
+  background-color: #000000;
+  color: #ff4757;
+  font-family: 'Digital7', 'Courier New', monospace;
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 30px 50px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 0 0 10px #ff4757;
+  border: 3px solid #333;
+  min-width: 120px;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Reset section styling */
+.reset-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reset button styling */
+.reset-btn {
+  background-color: #ff4757;
+  color: white;
+  font-family: 'Digital7', 'Arial', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin: 25px auto;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 8px rgba(255, 71, 87, 0.3);
+}
+
+.reset-btn:hover {
+  background-color: #ff3742;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 71, 87, 0.4);
+}
+
+.reset-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 71, 87, 0.3);
+}
+
+/* Score increment/decrement buttons */
+.score-btn {
+  background-color: transparent;
+  color: white;
+  font-family: 'Digital7', 'Courier New', monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-align: center;
+  border: 3px solid #ffffff;
+  min-width: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect fix: keep text visible */
+.score-btn:hover {
+  background-color: #f8f8f8;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Responsive adjustments for tablets and phones */
+@media (max-width: 768px) {
+  .scoreboard {
+    width: 90%;
+    gap: 5%;
+    flex-direction: column;
+  }
+
+  span.homeScore,
+  span.guestScore {
+    font-size: 3rem;
+    padding: 20px 30px;
+    min-width: 100px;
+  }
+
+  .score-btn {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    min-width: 45px;
+  }
+
+  .reset-btn {
+    font-size: 1rem;
+    padding: 10px 16px;
+    margin: 10px 0;
+  }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+  .scoreboard {
+    width: 95%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  #homeScore h1,
+  #guestScore h1 {
+    font-size: 1.5rem;
+  }
+
+  span.homeScore,
+  span.guestScore {
+    font-size: 2.5rem;
+    padding: 15px 25px;
+    min-width: 80px;
+  }
+
+  .score-btn {
+    font-size: 1rem;
+    padding: 6px 10px;
+    min-width: 40px;
+  }
+
+  .reset-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+  }
+}
